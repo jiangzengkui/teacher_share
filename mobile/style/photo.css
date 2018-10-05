@@ -1,0 +1,110 @@
+#lunbo{
+    width: 289px;
+    height: 300px;
+    color: rgb(42,106,63);
+    position: absolute;
+    top: 35%;
+    left:7%;
+    overflow: hidden;
+}
+@media screen  and (min-width: 320px){
+    #lunbo{
+        width: 289px;
+        height: 300px;
+        color: rgb(42,106,63);
+        position: absolute;
+        top: 20%;
+        left:5%;
+        overflow: hidden;
+    }
+
+}
+@media screen  and (min-width: 375px){
+    #lunbo{
+        width: 289px;
+        height: 300px;
+        color: rgb(42,106,63);
+        position: absolute;
+        top: 35%;
+        left:11%;
+        overflow: hidden;
+    }
+
+}
+#lunbo #photo #boxlist{
+    width: 1500px;
+    height: 300px;
+    font-size: 0;
+    margin-top: 1px;
+}
+#lunbo #photo #boxlist img{
+    width: 300px;
+    height: 300px;
+}
+#leftarrow,#rightarrow{
+    width: 30px;
+    height: 50px;
+    background-color: rgba(34,37,31,0.8);
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    line-height: 50px;
+}
+#leftarrow{
+    position: absolute;
+    top:110px;
+    left: 0px;
+}
+
+#rightarrow{
+    position: absolute;
+    top:110px;
+    left: 270px;
+}
+
+#box{
+    width: 100%;
+    height: 667px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+#play{
+    width: 100%;
+    height: 667px;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+#play #v{
+    width: auto;
+    position: absolute;
+    margin-top: 40%;
+    overflow: hidden;
+}
+@media screen  and (min-width: 320px){
+    #play #v{
+        width: auto;
+        position: absolute;
+        margin-top: 40%;
+        overflow: hidden;
+    }
+    #play #v div{
+     margin-left: 6%;
+    }
+}
+@media screen  and (min-width: 375px){
+    #play #v{
+        width: 375px;
+        height: 300px;
+        position: absolute;
+        margin-top: 40%;
+        overflow: hidden;
+    }
+
+
+}

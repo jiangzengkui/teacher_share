@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云谷教育云</title>
+</head>
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../style/common.css"/>
+<link rel="stylesheet" href="../style/public.css"/>
+<!--自定义表单-->
+<link rel="stylesheet" type="text/css" href="../style/form.css"/>
+<!--弹窗-->
+
+
+<!--弹窗-->
+<script type="text/javascript" src="../script/layer.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/admin_comm.js"></script>
+<!--菜单-->
+<script type="text/javascript" src="../script/menu.js"></script>
+
+
+
+ <!--树-->
+
+    <link rel="stylesheet" href="../resource/plus/ztree/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../resource/plus/ztree/js/jquery.ztree.core.min.js"></script>
+	<script type="text/javascript" src="../resource/plus/ztree/js/jquery.ztree.excheck.min.js"></script>
+    
+
+<style>
+.money_pre{
+font-size:25px;
+
+}
+.money{
+margin:20px 0;font:60px/40px Impact;
+}
+</style>
+
+
+<script>
+function copy(){
+winopen("复制教材章节","../tea_cont/zj_list.html");
+
+}
+</script>
+
+<body>
+<div id="nav">
+	<img src="../images/logo_3.fw.png" class="logo" style="width:170px;cursor:pointer" />
+    <div class="man10"></div>
+    <div class="nav nav1">基础数据<div class="tab"></div></div>
+    <ul class="nav_list  undis">
+    <a href="1-0.html" ><li>昵称管理</li></a>
+  	  <a href="1-1.html" ><li>数据字典维护</li></a>
+    	<a href="1-2.html" ><li  >平台管理用户</li></a>
+		<a href="1-3.html" ><li>教材章节管理</li></a>   
+    	   
+    </ul>
+	
+	<div class="nav nav2">教育管理<div class="tab"></div></div>
+    <ul class="nav_list ">
+    	<a href="2-1.html" ><li  >开通学校</li></a>
+    	<a href="2-2.html" ><li >教师管理</li></a>
+        <a href="2-3.html" ><li class="in">课程管理</li></a>
+         <a href="2-4.html" ><li>财务统计查询</li></a>
+    </ul>
+   
+   
+ 
+</div>
+<div id="top">
+	<div id="nav_tab">
+    	<span class="top"></span>
+    	<span class="middle"></span>
+    	<span class="bottom"></span>
+    </div>
+    <a class="sys_menu quit" href="#">退出账号</a>
+    <a class="sys_menu set" href="javascript:userInfo()">密码设置</a>
+    <a class="sys_menu user" href="###">张莉莉|教师</a>
+   
+</div>
+<div id="service">
+	<div class="top"></div>
+	<div class="qq">QQ在线咨询</div>
+	<div class="tel">技术支持<br><span>400-800-1234</span></div>
+	<div class="contact">给我们提建议</div>
+	<div class="bottom"></div>
+</div>
+<div id="loading"></div>
+<div id="main" name='main'>
+	
+
+
+<div id="crumbs">
+	<a href='index.html' class="default">首页</a>
+	<a href="#">教育管理</a>
+	<a href="2-3.html">课程管理</a>
+</div>
+<div class="man20" ></div>
+<div id="tips" style="width:95%">
+   <div class="icon"></div>
+   <div class="close"></div>
+ 管理老师发布的课程，也可以自己新增
+</div>
+<div class="man20" ></div>
+    <div id="nav_inside">
+    	<a href="2-3-1.html" >课程及定价</a>
+    	<a href="2-3-2.html" class="in">课程章节</a>
+        <a href="2-3-3.html">课程视频内容</a>
+        <a href="2-3-4.html">课程评价</a>
+ </div>
+
+<dl class="main_content" id="teacher_infor">
+<dt class="title">章节维护</dt>
+		<table style="width:100%">
+        <tr>
+        <td style="width:30%; vertical-align:top">
+       <div style="margin-top:10px">
+       <a class="input_button red"  style="width:100px" href="#">新增单元</a>
+	    <a class="input_button red"  style="width:100px" href="javascript:copy()">复制章节</a>
+       </div>
+       
+      <ul id="treeDemo" class="ztree"></ul>
+       
+        
+         
+        </td>
+        <td style="width:1%; vertical-align:top; border-left:#063 solid 1px">
+        
+        </td>
+    
+       <td style="width:69%; vertical-align:top">
+        	<table class="content" border="0" cellspacing="0">
+          <tr>
+		  <td class="lable w2 t-r">章节名称<font class="red">*</font></td>
+          <td >
+          <input type="text" class="input_text form_input_width"  value="管理人员设置" />
+          </td>
+		  </tr>
+          
+        
+          
+           <tr>
+		  <td class="lable w2 t-r">同层顺序<font class="red">*</font></td>
+          <td >
+          <input type="text" class="input_text form_input_width"  value="1" />
+          </td>
+		  </tr>
+          
+           
+          
+          
+          </table>
+          
+            <dd class="content_footer">
+       	 <input type="button" class="input_button blue" value="保存" onclick="save()" style="width:120px"/>
+       <input type="button" class="input_button green" value="新增下一级" onclick="save()" style="width:120px"/>
+       <input type="button" class="input_button red" value="删除" onclick="save()" style="width:120px"/>
+        </dd>
+
+
+          
+        </td>
+        </tr>
+        </table>
+
+
+</div><!--#main-->
+<!--<div id="bottom">Copyright © 2014 - 2016 <span>成都学邦科技有限公司</span>版权所有. 川公网安备11010802015210号 | 川CP备14027590号-1</div>-->
+</body>
+</html>
+
+<script type="text/javascript">
+		//id 	包含关系层级
+		//pid	层级
+		
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback:{
+				onClick:getValue
+			}
+		};
+		var zNodes =[
+			{ id:1, pId:0, name:"四则运算", open:true,area_id:"001"},
+			{ id:2, pId:0, name:"小数的意义和性质", open:true,area_id:"001"},
+			{ id:3, pId:0, name:"三角形", open:true,area_id:"001"},
+			
+			
+			{ id:11, pId:1, name:"加、减法的意义和各部分间的关系",area_id:"001001"},
+			{ id:12, pId:1, name:"乘、除法的意义和各部分间的关系",area_id:"001001"},
+			{ id:13, pId:1, name:"括号",area_id:"001001"},
+			
+			{ id:21, pId:2, name:"小数的意义和读写法",area_id:"001001"},
+			{ id:22, pId:2, name:"数的性质和大小比较",area_id:"001001"},
+			
+			
+			{ id:31, pId:3, name:"三角形的特性",area_id:"001001"},
+			{ id:32, pId:3, name:"三角形的分类",area_id:"001001"},
+			
+			
+		];
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			
+		function getValue(event,treeId,treeNode){
+		//	alert(treeNode.name+"-"+treeNode.area_id)
+		}
+		
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			var treeObj = $.fn.zTree.getZTreeObj("treeDemo"); 		
+		treeObj.expandAll(true); 
+</script>

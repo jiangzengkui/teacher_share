@@ -1,0 +1,81 @@
+.none{display:none}
+.input_select,
+.input_textarea,
+.input_text
+{outline:none;display:inline-block;transition:.3s; box-sizing:border-box; line-height:40px;font:400 14px/16px HelveticaNeue,\5FAE\8F6F\96C5\9ED1; color:#666; border:1px solid #ddd}
+
+.input_textarea{padding:10px; line-height:20px;border-radius:5px}
+/**
+.input_text{height:40px;border-radius:5px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; text-indent:10px;}
+**/
+.input_text{height:40px;border-radius:5px;overflow:hidden;text-overflow:ellipsis; text-indent:10px;}
+
+.input_select.in,
+.input_textarea:focus,
+.input_text:focus
+{border-color:#10de7f;color:#333}
+
+.input_file{display:inline-block;height:40px}
+.input_file .input_text{width:200px; margin-left:20px}
+.input_button{display:inline-block; height:40px; width:100px; color:#666;font:400 14px/40px \5FAE\8F6F\96C5\9ED1 ;border-radius:5px;color:#fff; text-align:center;transition:.3s; background:#666; border:0; margin:0 10px; cursor:pointer}
+.input_button:hover{background:#06a34b}
+.textsizeview{margin-left:10px}
+
+.input_button.green{background:#10de7f}
+.input_button.red{background:#e74c3c}
+.input_button.blue{background:#3498db}
+
+
+.input_checkbox,.input_radio{height:25px; line-height:25px;display:inline-block;cursor:pointer; margin-right:10px}
+.input_checkbox span,.input_radio span{display:inline-block;height:25px;line-height:25px;font:400 13px/25px HelveticaNeue,\5FAE\8F6F\96C5\9ED1; color:#666;vertical-align:.7ex}
+
+.input_checkbox .checkbox{display:inline-block;width:25px;height:25px; background:#fff;outline:none;transition:.3s; box-sizing:border-box; border:1px solid #ddd;border-radius:5px;background:#fff url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNDcuNTY3LDY3LjU3NWMtMy45NzgtMy4yNDEtNC4zNTYtMy4zMzctOC45LTUuNjM5Yy0yLjA0NC0xLjA0NC01LjA1NywxLjY0NS02LjUzLDMuNjM1TDkyLDExNy43MjgNCglMNjUuODUxLDgzLjk3M2MtMS40NzktMS45ODgtNC4yMDYtMi43Mi02LjI1MS0xLjc4MmMtNC42NTgsMi40MDctNC4xODksMi4zMjYtOC4xNjgsNS40NjZjLTEuODE3LDEuNDY2LTEuOTMyLDQuMDgyLTAuNDU2LDYuMDY1DQoJYzAsMCwyOC4xODMsMzYuNDk5LDMxLjU5Miw0MC44OTZjNC45OTksNi4yNzUsMTQuMDksNS45NjUsMTguODY0LDBjMy41Mi00LjQ5OCw0Ni41OS02MS4wNzgsNDYuNTktNjEuMDc4DQoJQzE0OS40OTksNzEuNTQ5LDE0OS4zODUsNjguOTM3LDE0Ny41NjcsNjcuNTc1eiIvPg0KPC9zdmc+DQo=) no-repeat center; background-size:0 0}
+.input_checkbox .checkbox.in{border:0; background:#10de7f url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNDcuNTY3LDY3LjU3NWMtMy45NzgtMy4yNDEtNC4zNTYtMy4zMzctOC45LTUuNjM5Yy0yLjA0NC0xLjA0NC01LjA1NywxLjY0NS02LjUzLDMuNjM1TDkyLDExNy43MjgNCglMNjUuODUxLDgzLjk3M2MtMS40NzktMS45ODgtNC4yMDYtMi43Mi02LjI1MS0xLjc4MmMtNC42NTgsMi40MDctNC4xODksMi4zMjYtOC4xNjgsNS40NjZjLTEuODE3LDEuNDY2LTEuOTMyLDQuMDgyLTAuNDU2LDYuMDY1DQoJYzAsMCwyOC4xODMsMzYuNDk5LDMxLjU5Miw0MC44OTZjNC45OTksNi4yNzUsMTQuMDksNS45NjUsMTguODY0LDBjMy41Mi00LjQ5OCw0Ni41OS02MS4wNzgsNDYuNTktNjEuMDc4DQoJQzE0OS40OTksNzEuNTQ5LDE0OS4zODUsNjguOTM3LDE0Ny41NjcsNjcuNTc1eiIvPg0KPC9zdmc+DQo=) no-repeat center; background-size:25px 25px}
+
+.input_radio .radio{display:inline-block;width:20px;height:20px; background:#fff;outline:none; box-sizing:border-box; border:1px solid #ddd;border-radius:100%;background:#fff; position:relative}
+.input_radio .radio::after{position:absolute; z-index:2;width:0; height:0; background:#10de7f; content:'';border-radius:100%; left:12px; top:12px;transition:.3s}
+.input_radio .radio.in::after{position:absolute; z-index:2;width:11px; height:11px; background:#10de7f; content:'';border-radius:100%; left:4px; top:4px}
+
+.input_select{display:inline-block;transition:.3s; line-height:40px;font:400 14px/16px HelveticaNeue,\5FAE\8F6F\96C5\9ED1; color:#666; border:1px solid #ddd;height:38px; line-height:38px; padding:0 40px 0 15px; position:relative;border-radius:5px; background:#fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjIwMHB4IiBoZWlnaHQ9IjIwMHB4IiB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAwIDIwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjMTBERTdGIiBkPSJNMTQ1LjY1OSw2OC45NDljLTUuMTAxLTUuMjA4LTEzLjM3Mi01LjIwOC0xOC40NzQsMEw5OS40NzksOTcuMjMzTDcxLjc3Miw2OC45NDkNCgljLTUuMS01LjIwOC0xMy4zNzEtNS4yMDgtMTguNDczLDBjLTUuMDk5LDUuMjA4LTUuMDk5LDEzLjY0OCwwLDE4Ljg1N2w0Ni4xOCw0Ny4xMzlsNDYuMTgxLTQ3LjEzOQ0KCUMxNTAuNzU5LDgyLjU5OCwxNTAuNzU5LDc0LjE1NywxNDUuNjU5LDY4Ljk0OXoiLz4NCjwvc3ZnPg0K)no-repeat center right 5px; background-size:20px 20px; text-decoration:none}
+.input_select>span{margin:0}
+.input_select .option_bar{position:absolute; z-index:3; left:-1px; display:block; width:100%; background:#000; top:35px; border:1px solid #10de7f; overflow:hidden; border-radius:0 0 5px 5px; background:#fff; display:none}
+.input_select .option_bar .menu{width:100%; height:40px;font:400 14px/40px HelveticaNeue,\5FAE\8F6F\96C5\9ED1;transition:.3s; text-indent:15px}
+.input_select .option_bar .menu.title{color:#ccc; cursor:no-drop}
+.input_select .option_bar .menu:hover{background:#e1fff1}
+
+
+
+.demo--label{margin:20px 20px 0 0;display:inline-block}
+.demo--radio{display:none}
+.demo--radioInput{background-color:#fff;border:1px solid rgba(0,0,0,0.15);border-radius:100%;display:inline-block;height:16px;margin-right:10px;margin-top:-1px;vertical-align:middle;width:16px;line-height:1}
+.demo--radio:checked + .demo--radioInput:after{background-color:#57ad68;border-radius:100%;content:"";display:inline-block;height:12px;margin:2px;width:12px}
+.demo--checkbox.demo--radioInput,.demo--radio:checked + .demo--checkbox.demo--radioInput:after{border-radius:0}</style>
+
+ /* basic style */
+.close {
+    /* still bad on picking color */
+    background: orange;
+    color: red;
+    /* make a round button */
+    border-radius: 12px;
+    /* center text */
+    line-height: 20px;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    font-size: 18px;
+    padding: 1px;
+}
+/* use cross as close button */
+.close::before {
+    content: "\2716";
+}
+/* place the button on top-right */
+.close {
+    top: -10px;
+    right: -10px;
+    position: absolute;
+}
+.tagcls{
+background-color:#EAF7E8; position: relative;float:left; padding:5px; margin-left:20px;border: 1px solid #339933; margin-top:10px;
+}

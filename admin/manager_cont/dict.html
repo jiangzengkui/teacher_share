@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--通用样式-->
+<link rel="stylesheet" type="text/css" href="../style/common.css"/>
+<!--弹窗iframe通用样式,顺序必须在common.css以后-->
+<link rel="stylesheet" type="text/css" href="../style/common_iframe.css"/>
+
+<!--自定义表单-->
+<link rel="stylesheet" type="text/css" href="../style/form.css"/>
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/layer.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+
+  <!--表单页面需要引入-->
+ <script src="../script/form.js"></script>
+     <!--表单输入字数事件-->
+ <script type="text/javascript" src="../script/valuechange.js"></script>
+ <script type="text/javascript" src="../script/check.js"></script>
+ 
+ 
+ <!--树-->
+
+    <link rel="stylesheet" href="../resource/plus/ztree/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="../resource/plus/ztree/js/jquery.ztree.core.min.js"></script>
+	<script type="text/javascript" src="../resource/plus/ztree/js/jquery.ztree.excheck.min.js"></script>
+    
+
+
+
+
+ <style>
+ 
+ </style>
+
+<script>
+/**
+导航切换
+**/
+function nav_inside(){
+	//alert($("#nav_inside").children("a:first"));
+	$("#nav_inside").children("a:first").addClass("in");
+	$("#nav_inside").children("a").click(function(){
+     $("#nav_inside").children("a").removeClass("in");
+	// alert($(this[0]));
+	 $(this).addClass("in");
+	 $(".show").hide();
+	 $("."+$(this).attr("show_class")).show();
+    });
+}
+$(function(){
+	nav_inside();
+});
+
+
+
+</script>
+<script>
+
+</script>
+</head>
+<body>
+    <div id="nav_inside">
+    	<a show_class="show_1">字典名称</a>
+    	<a show_class="show_2">字典内容</a>
+ </div>
+
+
+
+  
+ 
+	   <dl class="main_content">
+       
+         <div class="show show_1">
+
+ <table class="content" border="0" cellspacing="0">
+		
+		
+		
+			<td class="lable w2">字典名称<font class="red">*</font></td>
+					<td>
+					
+					<input class="input_text form_input_width"  type="text" />
+					</td>
+			</tr>
+				<tr>
+		
+		
+			<td class="lable w2">同级顺序<font class="red">*</font></td>
+					<td>
+					
+					<input class="input_text form_input_width"  type="text" />
+					</td>
+			</tr>
+		 
+        
+	</table> 
+	   
+    	<dd class="content_footer">
+			<a class="input_button blue"  style="width:200px" type="button" href="1-1.html"> 保存</a>
+		</dd>
+        
+       </div><!--show1-->
+       
+        <div class="show show_2" style="display:none">
+        
+        <dt class="title">字典内容</dt>
+		<table style="width:100%">
+        <tr>
+        <td style="width:30%; vertical-align:top">
+       <div style="margin-top:10px">
+       <a class="input_button red"  style="width:200px" href="#">新增第一层</a>
+       </div>
+       
+      <ul id="treeDemo" class="ztree"></ul>
+       
+        
+         
+        </td>
+        <td style="width:1%; vertical-align:top; border-left:#063 solid 1px">
+        
+        </td>
+    
+       <td style="width:69%; vertical-align:top">
+        	<table class="content" border="0" cellspacing="0">
+          <tr>
+		  <td class="lable w2 t-r">编码<font class="red">*</font></td>
+          <td >
+          <input type="text" class="input_text form_input_width"  value="" />
+          </td>
+		  </tr>
+           <tr>
+		  <td class="lable w2 t-r">名称<font class="red">*</font></td>
+          <td >
+          <input type="text" class="input_text form_input_width"  value="" />
+          </td>
+		  </tr>
+          
+        
+          
+           <tr>
+		  <td class="lable w2 t-r">同层顺序<font class="red">*</font></td>
+          <td >
+          <input type="text" class="input_text form_input_width"  value="1" />
+          </td>
+		  </tr>
+          
+           
+          
+          
+          </table>
+          
+            <dd class="content_footer">
+       	 <input type="button" class="input_button blue" value="保存" onclick="save()" style="width:120px"/>
+       <input type="button" class="input_button green" value="新增下一级" onclick="save()" style="width:120px"/>
+       <input type="button" class="input_button red" value="删除" onclick="save()" style="width:120px"/>
+        </dd>
+
+
+          
+        </td>
+        </tr>
+        </table>
+
+        </div><!--show2-->
+      </dl>
+
+    </body>
+    </html>
+  
+
+
+<script type="text/javascript">
+		//id 	包含关系层级
+		//pid	层级
+		
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback:{
+				onClick:getValue
+			}
+		};
+		var zNodes =[
+			{ id:1, pId:0, name:"小学", open:true,area_id:"001"},
+			{ id:2, pId:0, name:"初中", open:true,area_id:"001"},
+			{ id:3, pId:0, name:"高中", open:true,area_id:"001"},
+			
+		
+			
+		];
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			
+		function getValue(event,treeId,treeNode){
+		//	alert(treeNode.name+"-"+treeNode.area_id)
+		}
+		
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			var treeObj = $.fn.zTree.getZTreeObj("treeDemo"); 		
+		treeObj.expandAll(true); 
+</script>

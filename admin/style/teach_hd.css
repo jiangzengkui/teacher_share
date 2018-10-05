@@ -1,0 +1,232 @@
+.times{
+    width: 50%;
+    color: gray;
+}
+.times {
+    display:block;
+}
+.times ul {
+    margin-left:25px;
+    border-left:2px solid #ddd;
+}
+.times ul li {
+    width:100%;
+    margin-left:-12px;
+    line-height:20px;
+    min-height: 60px;
+    list-style-type: none;
+    /*padding-bottom: 10px;*/
+    padding-top: 0px;
+    /*margin-top: 35px;*/
+    /*font-weight:narmal;*/
+}
+.times ul li b {
+    width:8px;
+    height:8px;
+    background:#fff;
+    border:2px solid #555;
+    margin:5px;
+    border-radius:6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    overflow:hidden;
+    display:inline-block;
+    float:left;
+}
+.times ul li span {
+    padding-left:14px;
+    font-size:12px;
+    line-height:20px;
+    color:#555;
+}
+.times ul li p {
+    padding-left:10px;
+    font-size:14px;
+    line-height:25px;
+}
+
+.times .picture{
+    width: 90px;
+}
+.times span{
+    display: block;
+    margin-top: -5px;
+}
+.times p{
+    margin-left: 30px;
+    color: #007a42;
+    font-size: 24px;
+    font-weight: 800;
+}
+.times span{
+    margin-left: 50px;
+}
+.times img{
+	  margin-left: 50px;
+}
+.times .right{
+    display: block;
+    margin-left: 150px;
+    margin-top: -70px;
+    position: relative;
+}
+.times .right .pic{
+    margin-top: 12px;
+    margin-left: 0px;
+}
+.times .right .pic img{
+    width: 100px;
+}
+
+.times .right .vide{  position: absolute;
+    left: 80px;
+    top: 37px;
+}
+.times .vide img{
+    width: 100px;
+}
+.times .vide .mask{
+    width: 95px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    padding-bottom: 20px;
+    background-color: rgba(0,0,0,0.7);
+}
+.times .vide .mask img{
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.times .rightlist{
+    margin-left: -70px;
+}
+.times .rightlist .mask{
+    margin-top: 1px;
+}
+.times .word{
+    margin-left: 200px;
+    margin-top: -30px;
+    color: gray;
+    padding-bottom: 20px;
+}
+.times .word span{
+    margin-left: 15px;
+}
+
+.starView{
+    width: 200px;
+    position:relative;
+    margin:10px auto;
+    margin-left: -50px;
+
+}
+.starView ul,.starView span{
+    float:left;
+    display:inline;
+    height:19px;
+    line-height:19px;
+}
+.starView ul{
+    margin:0 10px;
+}
+.starView li{
+    float:left;
+    width:24px;
+    /*margin-left: 10px;*/
+    cursor:pointer;
+    text-indent:-9999px;
+    background:url("../images/star.png") no-repeat;
+}
+.starView{
+    width: 100%;
+    height: 20px;
+}
+.starView .starlist{
+    float:left;
+    width:24px;
+    margin-left: 1px;
+    margin-top: -20px;
+    text-indent:-9999px;
+    background:url("../images/star.png") no-repeat;
+    background-position: 0px 20px;
+}
+.starView .star{
+    float:left;
+    width:24px;
+    margin-left: 1px;
+    margin-top: 0;
+    text-indent:-9999px;
+    background:url("../images/star.png") no-repeat;
+    background-position: 0px -28px;
+}
+.neirong{
+    width: 50%;
+    margin-left: 150px;
+    /*margin-top: 50px;*/
+    background-color:#E0F1E8;
+    padding: 2px 5px 5px 5px;
+    position: relative;
+}
+.neirong .box_top{
+    width: 20px;
+    position: absolute;
+    top: -18px;
+    left: 40%;
+    /*right: auto;*/
+}
+.reply{
+    width: 51.2%;
+    margin-left: 150px;
+    background-color:#E0F1E8;
+}
+.reply span{
+    padding-top: 20px;
+    margin-left: -1px;
+}
+.reply img{
+    display: block;
+}
+.reply span{
+    display: block;
+}
+.reply .replybox{
+    margin-left: 55%;
+    cursor: pointer;
+    margin-top: -10px;
+}
+.reply .replybox span{
+    margin-left: 65px;
+    margin-top: -35px;
+}
+.neirong .chose{
+    height: 30px;
+    display: block;
+    margin-left: -1px;
+    border-bottom: 1px solid gainsboro;
+    /*padding-bottom: 5px;*/
+}
+.redx{
+    background-image: url("../images/red.jpg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+.zan{
+    background-image: url("../images/like.jpg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+.wx{
+    background-image: url("../images/wx.jpg");
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.dm{
+    background-image: url("../images/dm2.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+.qd{
+	font-weight:bold; font-size:20px
+}

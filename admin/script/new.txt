@@ -1,0 +1,9 @@
+	.find('.menu').click(function(){
+		if(!$(this).hasClass('title')){
+			var value=$(this).html()
+			var code=$(this).attr("value");
+			var provice_code=$(this).parents('.option_bar').attr("inpId");
+			$("#"+provice_code).val(code);
+			$(this).parents('.input_select').blur().find('span').html(value)
+			console.log(value)
+		}

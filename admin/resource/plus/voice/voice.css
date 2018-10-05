@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+ .audio{
+
+	   width:8rem;
+	   height:3.8rem;
+	 
+   }
+   
+   .audioleft {
+	   position: absolute;
+       left: 30%;  
+   }
+
+.yuyin{
+    width: 100%;
+    height: 20px;
+    background-color:white;
+    !import
+}
+.yuyin .box{
+    width: 100%;
+    height: 400px;
+}
+.yuyin .yuyin_add{
+    width: 150px;
+    height: 35px;
+    margin-left: 38%;
+}
+.yuyin .yuyin_add input{
+    /*width: 100px;*/
+    height: 40px;
+    border: none;
+    background-color: white;
+    color: #03af60;
+    font-weight: 800;
+     -webkit-appearance: none;
+    
+}
+  .yuyin .yuyin_word{
+    width: 100%;
+    line-height: 45px;
+    margin-top: 0px;
+    position: relative;
+    font-weight: 800;
+    font-size: .9em;
+}
+
+.yuyin .yuyin_word span{
+    color: #03af60;
+}
+.layui-m-layer span{
+    display: block;
+    width: 100%;
+    text-align:
+    center;color: gray
+}
+.recorded{
+    width: 90%;
+    height:40px;
+    color: white;
+    background-color: #03af60;
+    margin-left: 5%;
+    border-radius: 25px;
+    border: none;
+    margin-top: 10px;
+     -webkit-appearance: none;
+ }
+.recording{
+	  width: 90%;
+    height:40px;
+    color: white;
+    background-color:#F00;
+    margin-left: 5%;
+    border-radius: 25px;
+    border: none;
+    margin-top: 10px;
+ -webkit-appearance: none;
+}

@@ -1,0 +1,109 @@
+/*
+@author:	xiaolin.wei
+@E-mail:	136896100@qq.com
+@qq:		136896100
+@version:	1.0 for wechat
+@import 	'/style/animation.css';
+*/
+//----public function
+.font(@blod:400,@size:12px,@lineHeight:28px){font:@blod @size/@lineHeight @fontfamily}
+.man(@height:5px){height:@height;.none;.both;.w;.OF}
+.b-r(@radius:300px){border-radius:@radius}
+.b-s(@x:0px,@y:0px,@blur:3px,@color:rgba(0,0,0,.7)){box-shadow:@x @y @blur @color}
+.t-s(@x:1px,@y:1px,@blur:1px,@color:rgba(255,255,255,.7)){text-shadow:@x @y @blur @color;-moz-text-shadow:@x @y @blur @color;-webkit-text-shadow:@x @y @blur @color}
+.rec(@width,@height){width:@width;height:@height;.b}
+.anm(@time:.3s){transition:@time;-moz-transition:@time;-webkit-transition:@time}
+.absolute(@top:0,@left:0,@zindex:2){position:absolute; top:@top; left:@left; z-index:@zindex}
+//----color List
+@in:inherit;
+@mainColor:#666;
+@mc:#1f9c33;
+@orange:#ff4200;
+@fontfamily:HelveticaNeue,\5FAE\8F6F\96C5\9ED1;
+//,\5FAE\8F6F\96C5\9ED1;
+.color{color:@mainColor}
+.cf{color:#fff}
+.c0{color:#000}
+.c3{color:#333}
+.c6{color:#666}
+.c9{color:#999}
+//----test style
+.bg0{background:rgba(0,0,0,.5)}
+.bgf{background:rgba(255,255,255,.5)}
+
+//---public style
+.moretext{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+*{margin:0;padding:0; outline:none;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none}
+.boxsize{box-sizing:border-box}
+html,div,p,ul,li,table,body{.font;.color}
+ul,li,dd,dl,dt{list-style:none}
+p{text-indent:24px}
+img{border:0}
+.b{display:block}
+.ahand{cursor:pointer}
+.l{float:left}
+.r{float:right}
+.both{clear:both}
+.none{line-height:0;font-size:0;margin:0;padding:0}
+.fw{font-weight:700}
+.f14{font-size:14px}
+.t-g{text-align:center}
+.t-l{text-align:left}
+.t-r{text-align:right}
+.t-j{text-align:justify;text-justify:inter-word;text-align-last:justify}
+.d-l{display:inline}
+.f14{font-size:14px}
+.f18{font-size:18px}
+.OF{overflow:hidden}
+.w{width:100%}
+.auto{margin:0 auto}
+.undis{display:none}
+.man0{.man(0)}
+.man{.man()}
+.man10{.man(10px)}
+.man15{.man(15px)}
+.man20{.man(20px)}
+.man30{.man(30px)}
+.man40{.man(40px)}
+.man50{.man(50px)}
+.man60{.man(60px)}
+::selection{color:#fff; background:#06a34b}
+::-moz-selection{color:#fff; background:#06a34b}
+//---document a
+a{text-decoration:none;.c6;&:hover{.c3}}
+//---document commin style
+
+
+#bottom{.rec(100%,50px); background:#fff; position:fixed; z-index:2; bottom:0; left:0;.b-s(0,-2px,10px,rgba(0,0,0,.3));
+	a{.l;.rec(25%,50px);.t-g; position:relative;.font(400,12px,16px);
+		b{.rec(22.5px,21.5px); margin:7px auto 0}
+		&.one b{background:url(/vote/images/menu_1.jpg)}
+		&.two b{background:url(/vote/images/menu_2.jpg)}
+		&.three b{background:url(/vote/images/menu_3.jpg)}
+		&.four b{background:url(/vote/images/menu_4.jpg)}
+		&.one,&.two,&.three,&.four{b{background-size:contain}}
+		.msg{.rec(15px,15px);.b-r; background:#f74e34; position:absolute; top:.2rem; right:1rem;.OF;.cf; line-height:15px}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

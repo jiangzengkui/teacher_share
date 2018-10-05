@@ -1,0 +1,155 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,li,p{margin:0;padding:0}
+body{color:#666;font:12px/1.5 Arial;}
+ul{list-style-type:none;}
+#star{position:relative;;margin:10px auto;}
+#star ul,#star span{float:left;display:inline;height:19px;line-height:19px;}
+#star ul{margin:0 10px;}
+#star li{float:left;width:24px;cursor:pointer;text-indent:-9999px;background:url(../images/star.png) no-repeat;}
+#star strong{color:#f60;padding-left:10px;}
+#star li.on{background-position:0 -28px;}
+/*#star p{position:absolute;top:20px;width:159px;height:60px;display:none;background:url(../images/icon.gif) no-repeat;padding:7px 10px 0;}*/
+#star p em{color:#f60;display:block;font-style:normal;}
+#star .checked{
+    float:left;
+    width:24px;
+    cursor:pointer;
+    text-indent:-9999px;
+    background:url("../images/star.png") no-repeat;
+    background-position: 0px -28px;
+}
+
+
+
+.starView{position:relative;margin:10px auto;}
+.starView ul,.starView span{float:left;display:inline;height:19px;line-height:19px;}
+.starView ul{margin:0 10px;}
+.starView li{float:left;width:24px;cursor:pointer;text-indent:-9999px;background:url("../images/star.png") no-repeat;}
+.starView{
+    width: 100%;
+    height: 20px;
+}
+.starView .starlist{
+    float:left;
+    width:24px;
+    text-indent:-9999px;
+    background:url("../images/star.png") no-repeat;
+    background-position: 0px -28px;
+}
+.chose{
+    display: block;
+    margin-top: -10px;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 5px;
+}
+.listbox{
+    background-color:#E0F1E8;
+    padding: 2px 5px 5px 5px;
+    position: relative;
+}
+.listbox .pic{
+    width: 20px;
+    position: absolute;
+    top: -18px;
+    left: 40%;
+    /*right: auto;*/
+}
+
+
+.starbox{position:relative;margin:-50px 150px}
+.starbox ul,.starbox span{float:left;display:inline;height:19px;line-height:19px;}
+.starbox ul{margin:-35px 10px}
+@media screen  and (min-width: 320px){
+    .starbox ul{margin:-28px 10px}
+}
+@media screen  and (min-width: 375px){
+    .starbox ul{margin:-35px 10px}
+}
+
+.starbox ul{
+    margin-top: 50px;
+    margin-left: -20px;
+}
+.star_dp ul{
+    margin-top: 30px;
+    margin-left: -150px;
+}
+.starbox li{
+    float:left;
+    width:24px;
+    text-indent:-9999px;
+    background:url("../images/star.png") no-repeat;
+}
+.starbox{
+    width: 100%;
+    height: 20px;
+}
+.starbox .starlist{
+    float:left;
+    width:24px;
+    text-indent:-9999px;
+    background:url("../images/star.png") no-repeat;
+    background-position: 0px -28px;
+}
+.comment .right{
+    position: relative;
+}
+.comment .right .starbox{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 30%;
+}
+.comment .right .starbox span{
+
+}
+.comment .right .starbox  .star{
+    margin-top: -60px;
+    width:24px;
+
+}
+
+.example{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    /*background-color: #03AF60;*/
+    background: url("../images/bg@2x.png") no-repeat 100% 100% #03AF60;
+}
+.example .title font{
+    color: white;
+}
+.example .title span{
+    background-color: white;
+}
+.example p:nth-of-type(1){
+    color: #FCFF00;
+}
+.example p{
+    color: white;
+}
+.example span,h1{
+    color: #FCFF00;
+}
+.example h1{
+    margin-left: 20px;
+}
+.example .btn{
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 30px;
+    margin-left:5% ;
+    color: #009900;
+    border: none;
+    font-weight: 600;
+    background-color: white;
+   margin-top: 20px;
+    margin-bottom: 20px;
+}
+.example a{
+    color: white;
+    margin-left: 10px;
+    text-decoration: underline;
+}

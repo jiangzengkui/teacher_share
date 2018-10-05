@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<link rel="stylesheet" href="zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.core.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck.min.js"></script>
+</head>
+
+<body>
+		<div class="zTreeDemoBackground left"></div>
+        <ul id="treeDemo" class="ztree"></ul>
+	<input type="button" value="确定" id="sure" />
+</body>
+</html>
+<script type="text/javascript">
+		//id 	包含关系层级
+		//pid	层级
+		
+		var setting = {
+			check: {
+				enable:true,
+				chkboxType:{ "Y" : "ps", "N" : "ps"},
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+		var zNodes =[
+			{ id:1, pId:0, name:"音乐", open:true},
+			{ id:11, pId:1, name:"小提琴"},
+			{ id:11, pId:1, name:"大提琴"},
+			{ id:11, pId:1, name:"guany7ue"},
+			{ id:11, pId:1, name:"吉他"},
+			
+			{ id:2, pId:0, name:"舞蹈"},
+			{ id:21, pId:2, name:"芭蕾"},
+			{ id:21, pId:2, name:"其他"},
+			{ id:21, pId:2, name:"现代"},
+			{ id:21, pId:2, name:"嘻哈"},
+			
+			{ id:3, pId:0, name:"国学"},
+			{ id:31, pId:3, name:"围棋"},
+			{ id:31, pId:3, name:"象棋"},
+			{ id:31, pId:3, name:"现代"},
+			{ id:31, pId:3, name:"嘻哈"},
+		];
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			
+		function getNodesValueArray(obj){
+			var getValue=[]
+			var obj=$.fn.zTree.getZTreeObj(obj).getChangeCheckedNodes()
+			for(var i in obj){
+				if(obj[i].pId){
+					getValue.push(obj[i].name)
+				}
+			}
+			return getValue
+		}
+			
+	$('#sure').click(function(){
+		alert(getNodesValueArray('treeDemo'))
+	})
+			
+		
+		
+</script>

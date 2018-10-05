@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+#circle {
+	position: absolute;
+	 z-index:2;
+    width: 40px;
+    height: 40px;
+	top: 0px;
+	left:20px;
+	float:right;
+   background-color:#666;
+   margin-top:10px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+	
+	filter:alpha(opacity=50);  
+      -moz-opacity:0.5;  
+      -khtml-opacity: 0.5;  
+      opacity: 0.5;  
+}

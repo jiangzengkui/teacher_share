@@ -1,0 +1,1 @@
+version:easyui-1.3.1

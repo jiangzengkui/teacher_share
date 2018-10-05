@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+	<link rel="stylesheet" href="zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.core.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck.min.js"></script>
+</head>
+
+<body>
+<div class="zTreeDemoBackground left"></div>
+<ul id="treeDemo" class="ztree"></ul>
+</body>
+</html>
+<script type="text/javascript">
+		//id 	包含关系层级
+		//pid	层级
+		
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback:{
+				onClick:getValue
+			}
+		};
+		var zNodes =[
+			{ id:1, pId:0, name:"音乐", open:true},
+			{ id:11, pId:1, name:"小提琴"},
+			{ id:11, pId:1, name:"大提琴"},
+			{ id:11, pId:1, name:"guany7ue"},
+			{ id:11, pId:1, name:"吉他"},
+			
+			{ id:2, pId:0, name:"舞蹈"},
+			{ id:21, pId:2, name:"芭蕾"},
+			{ id:21, pId:2, name:"其他"},
+			{ id:21, pId:2, name:"现代"},
+			{ id:21, pId:2, name:"嘻哈"},
+			
+			{ id:3, pId:0, name:"国学"},
+			{ id:31, pId:3, name:"围棋"},
+			{ id:31, pId:3, name:"象棋"},
+			{ id:31, pId:3, name:"现代"},
+			{ id:31, pId:3, name:"嘻哈"},
+		];
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			
+		function getValue(event,treeId,treeNode){
+			alert(treeNode.name)
+		}
+		
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+					
+		
+</script>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" id="viewport" />
+<meta content="telephone=no,email=no" name="format-detection">
+<title>教师主页</title>
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/touchSwipe.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../style/teacher_theme.css"/>
+<link rel="stylesheet" type="text/css" href="../style/tfys.css"/>
+<script>
+function course(){
+  document.location="../course/index.html"	
+}
+</script>
+</head>
+
+<body class="green">
+<a href="../tea_list.html" class="go_ins">学校<br>首页</a>
+<img src="../upload/teach_head.jpg" id="head" />
+<h1 class="tea_name">李雪梅 </h1>
+
+<ul id="count">
+	<li class="b-r">浏览数<strong>2014</strong></li>
+	<li class="b-r">评论数<strong>102</strong></li>
+	<li>购买数<strong>231</strong></li>
+</ul>
+
+<div class="man10"></div>
+<ul id="honor">
+	<li class="year">5年教龄</li>
+    <li class="education">硕士学历</li>
+	<li class="teach">29岁</li>
+	<li class="identity">男</li>
+</ul>
+<div class="man10"></div>
+
+<div class="g_cont">
+	<ul id="nav">
+    	<a href="index.html"><li   style="width:33%">首页</li></a>
+        <a href="course_list.html" ><li class="in" style="width:33%">线上课程</li></a>
+    	<a href="commont_list.html" ><li style="width:33%">评价口碑</li></a>
+    	
+    </ul>
+    <div class="man20"></div>
+
+    <div class="course" onclick="course()" >
+    <div id="video">
+	<div class="mask">
+    <img src="../upload/c1.jpg" class="cover" />
+    <img src="../images/v1.png" class="icon" />
+    </div>
+	</div>
+    <div >
+    <div  class="course_tit">小学一年级上学期数学（人教）</div>
+    <div class="course_desc">
+    视频数：<label class="course_money" >415</label>
+    <span class="jg_left"/>
+    购买费用：<label  class="course_money">￥2100.00</label>
+    </div>
+    </div>
+    
+    </div>
+    
+    <div class="course"  onclick="course()">
+    <div id="video">
+	<div class="mask">
+    <img src="../upload/c2.jpg" class="cover" />
+    <img src="../images/v1.png" class="icon" />
+    </div>
+	</div>
+    <div style="">
+    <div class="course_tit">小学一年级下学期数学（人教）</div>
+    <div class="course_desc" >
+    视频数：<label  class="course_money">415</label>
+    <span class="jg_left"/>
+    购买费用：<label  class="course_money">￥2100.00</label>
+    </div>
+    </div>
+    
+    </div><!--course-->
+    
+   
+
+    
+</div>
+<div class="teach_index_bottom"></div>
+
+</body>
+</html>
+
+<script>
+$(function(){
+	/*
+		设置主题
+		green,blue,yello
+	
+	*/
+	//$('body').attr('class','blue')
+})
+</script>

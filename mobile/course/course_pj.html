@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" id="viewport" />
+
+<meta content="telephone=no,email=no" name="format-detection">
+<title>在线课程</title>
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/touchSwipe.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../plugs/mlayer/layer.js"></script>
+<script type="text/javascript" src="../plugs/wechat/wx-comm.js"></script>
+<link rel="stylesheet" type="text/css" href="../style/common.css"/>
+<link rel="stylesheet" type="text/css" href="../style/tfys.css"/>
+<script>
+$(function(){
+	//------video------
+	$('#video .mask').click(function(){
+		$(this).fadeOut(200)
+		document.getElementById('ins_video').play()
+	})
+});
+
+function pj(){
+	var content="<div class='vote_input'>";
+	 content+="<textarea placeholder='输入评价内容' style='width:100%;height:50px'></textarea>";
+	
+	 content+="<br><br>";
+	
+	content+="</div>";
+	content+="  <div style='width:100%;text-align:center;background-color:#F00; color:#FFF;font-size:16px;height:50px; position:fixed; z-index:2; bottom:0;line-height:60px  ' onclick='add_goods()'>发表评价</div>";
+	 //页面层
+  layer.open({
+    type: 1
+    ,content: content
+    ,anim: 'up'
+    ,style: 'position:fixed; bottom:0; left:0; width: 100%; height: 150px; padding:10px 0; border:none;'
+  });
+	
+}
+
+function down_order(){
+	var content="<div class='vote_input'>";
+	 content+="<input placeholder='孩子姓名' style='width:100%'/>";
+	
+	 content+="<br><br>";
+	content+="<input placeholder='手机号码' style='width:100%'/>";
+	content+="<br><br>";
+	content+="</div>";
+	content+="  <div style='width:100%;text-align:center;background-color:#F00; color:#FFF;font-size:16px;height:50px; position:fixed; z-index:2; bottom:0;line-height:60px  ' onclick='pay()'>提交</div>";
+	 //页面层
+  layer.open({
+    type: 1
+    ,content: content
+    ,anim: 'up'
+    ,style: 'position:fixed; bottom:0; left:0; width: 100%; height: 200px; padding:10px 0; border:none;'
+  });
+	
+}
+function pay(){
+document.location="pay.html";	
+}
+
+
+function playVedio(){
+	confirm("您的会员等级是K02,要升级成K03会员才能观看。<br/>升级费用:<font style='color:red'>￥2000元</font>",function(index){
+		layer.close(index);
+		down_order();
+	});
+}
+</script>
+</head>
+<body>
+<a href="../tea/index.html" class="go_home">教师<br>首页</a>
+<div id="video">
+	<div class="mask"><img src="../upload/v_pic.jpg" class="cover" /><img src="../images/v1.png" class="icon" /></div>
+    <video id="ins_video" width="16rem" height="8rem" controls="controls" src="../upload/video.mp4"></video>
+</div>
+<div style="text-align:center; color:#FFF; border-bottom:#F0F0F0 solid 1px; padding:10px; background:#096">
+小数的意义（一）-内容精讲
+</div>
+
+<ul id="cou_count">
+	<li class="b-r">浏览数<strong>2014</strong></li>
+	<li class="b-r">评论数<strong>102</strong></li>
+	<li>购买数<strong>231</strong></li>
+</ul>
+<div class="man10 "></div>
+<div id="nav">
+	<a href="index.html" class="b-r " style="width:33%">课程介绍</a>
+	<a href="course_zj.html" class="b-r " style="width:33%"> 课程章节</a>
+	<a href="course_pj.html" class="b-r in" style="width:33%">课程评价</a>
+</div>
+
+	
+    <div class="man20"></div>
+    <div style="margin-left:10px">
+    <a href="####" class="comment">
+    	<div class="left"><img src="../upload/1.png" /></div>
+    	<div class="right">
+        	<h1 class="xqb_db">秋天的数 <span style="margin-left:20px; color:#CCC"> 2015-06-09</span></h1>
+			<div class="man0"></div>
+       
+			<div class="man20"></div>
+            <font>
+                孩子说很喜欢周老师的课程很有趣，也学到不少东西孩子说很喜欢周老师的课程很有趣！
+            </font>
+		</div>
+        <div class="man0"></div>
+    </a>
+    <a href="####" class="comment">
+    	<div class="left"><img src="../upload/2.png" /></div>
+    	<div class="right">
+        	<h1 class="xqb_db">牛叔 <span style="margin-left:20px; color:#CCC"> 2015-06-09</span></h1>
+			<div class="man0"></div>
+       
+			<div class="man20"></div>
+            <font>
+                孩子说很喜欢周老师的课程很有趣，也学到不少东西孩子说很喜欢周老师的课程很有趣！
+            </font>
+		</div>
+        <div class="man0"></div>
+    </a>
+     <a href="####" class="comment">
+    	<div class="left"><img src="../upload/3.png" /></div>
+    	<div class="right">
+        	<h1 class="xqb_db">牛叔 <span style="margin-left:20px; color:#CCC"> 2015-06-09</span></h1>
+			<div class="man0"></div>
+       
+			<div class="man20"></div>
+            <font>
+                孩子说很喜欢周老师的课程很有趣，也学到不少东西孩子说很喜欢周老师的课程很有趣！
+            </font>
+		</div>
+        
+        <div class="man0"></div>
+    </a>
+      <a href="####" class="comment">
+    	<div class="left"><img src="../upload/4.png" /></div>
+    	<div class="right">
+        	<h1 class="xqb_db">牛叔 <span style="margin-left:20px; color:#CCC"> 2015-06-09</span></h1>
+			<div class="man0"></div>
+       
+			<div class="man20"></div>
+            <font>
+                孩子说很喜欢周老师的课程很有趣，也学到不少东西孩子说很喜欢周老师的课程很有趣！
+            </font>
+		</div>
+        
+        <div class="man0"></div>
+    </a>
+    </div>
+	
+	
+
+               
+
+<div class="man10"></div>
+<div id="bottom_tfys">
+<a href="../tea/index.html" class="home "><b></b>首页</a>
+	<a href="tel:13688006635" class="kf"><b></b>咨询</a>
+    <a href="javascript:pj()" class="pj"><b></b>评价</a>
+	<div class="down" onclick="playVedio()">
+    <table style="width:100%;margin-top:12px"><tr><td style=" margin-top:14px; color:#FFF; font-size:16px;clear:both">
+  我要学习
+    </td></tr></table>
+    </div>
+   
+</div>
+<div class="man60"></div>
+</body>
+</html>
+<script type="text/javascript" src="../script/banner.js"></script>
+<script type="text/javascript" src="../script/course.js"></script>

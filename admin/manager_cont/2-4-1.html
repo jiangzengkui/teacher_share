@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云谷教育云</title>
+</head>
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../style/common.css"/>
+<link rel="stylesheet" href="../style/public.css"/>
+<!--自定义表单-->
+<link rel="stylesheet" type="text/css" href="../style/form.css"/>
+<!--弹窗-->
+
+
+<!--弹窗-->
+<script type="text/javascript" src="../script/layer.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/admin_comm.js"></script>
+<!--菜单-->
+<script type="text/javascript" src="../script/menu.js"></script>
+
+ <script  type="text/javascript" src="../plug/FusionCharts/Charts/FusionCharts.js"></script>  
+
+<style>
+.money_pre{
+font-size:25px;
+
+}
+.money{
+margin:20px 0;font:60px/40px Impact;
+}
+</style>
+
+<script>
+function edit(){
+ // winopen("教师用户","add_tea.html","1000","500");	
+ document.location="2-3-1.html";
+}
+</script>
+
+<body>
+<div id="nav">
+	<img src="../images/logo_3.fw.png" class="logo" style="width:170px;cursor:pointer" />
+    <div class="man10"></div>
+    <div class="nav nav1">基础数据<div class="tab"></div></div>
+    <ul class="nav_list  undis">
+    <a href="1-0.html" ><li>昵称管理</li></a>
+  	  <a href="1-1.html" ><li>数据字典维护</li></a>
+    	<a href="1-2.html" ><li  >平台管理用户</li></a>
+		<a href="1-3.html" ><li>教材章节管理</li></a>   
+    	   
+    </ul>
+	
+	<div class="nav nav2">教育管理<div class="tab"></div></div>
+    <ul class="nav_list ">
+    	<a href="2-1.html" ><li  >开通学校</li></a>
+    	<a href="2-2.html" ><li >教师管理</li></a>
+        <a href="2-3.html" ><li>课程管理</li></a>
+         <a href="2-4.html" ><li  class="in">财务统计查询</li></a>
+    </ul>
+   
+   
+ 
+</div>
+<div id="top">
+	<div id="nav_tab">
+    	<span class="top"></span>
+    	<span class="middle"></span>
+    	<span class="bottom"></span>
+    </div>
+    <a class="sys_menu quit" href="#">退出账号</a>
+    <a class="sys_menu set" href="javascript:userInfo()">密码设置</a>
+    <a class="sys_menu user" href="###">张莉莉|教师</a>
+   
+</div>
+<div id="service">
+	<div class="top"></div>
+	<div class="qq">QQ在线咨询</div>
+	<div class="tel">技术支持<br><span>400-800-1234</span></div>
+	<div class="contact">给我们提建议</div>
+	<div class="bottom"></div>
+</div>
+<div id="loading"></div>
+<div id="main" name='main'>
+	
+
+
+<div id="crumbs">
+	<a href='index.html' class="default">首页</a>
+	<a href="#">教育管理</a>
+	<a href="2-3.html">财务统计</a>
+</div>
+<div class="man20" ></div>
+<div id="tips" style="width:95%">
+   <div class="icon"></div>
+   <div class="close"></div>
+ 查询财务信息
+</div>
+<div class="man20"></div>
+ <div id="nav_inside">
+    	<a href='2-4.html' >财务统计</a>
+    	<a href='2-4-1.html' class="in" >订单明细</a>
+    </div>
+
+
+
+
+<dl class="main_content" id="teacher_infor">
+<dt class="title">订单查询</dt>
+
+  <table class="content" border="0" cellspacing="0" >
+		<tr>
+			 <td >
+           
+             <label style=" margin-left:20px">
+            日期：
+			<input type="text" class="input_text" style="width:150px"/>-<input type="text" class="input_text" style="width:150px"/>
+             </label> 
+			 
+		  <label style=" margin-left:20px">
+            教师姓名：
+			<input type="text" class="input_text" style="width:150px"/>
+             </label> 
+			 
+             
+            
+             <a href="#" class="tdbtn del"  style=" margin-left:100px">查 询</a>
+             </td>
+
+		  </tr>
+		 </table>
+
+   <table class="content" border="0" cellspacing="0" >
+        	<tr>
+            	
+            	<td class="w3 lable">课程名称</td>
+                <td class="w3 lable">发布教师</td>
+            	<td class="w3 lable">购买者</td>
+                <td class="w3 lable">购买日期</td>
+            	 <td class="w3 lable">费用</td>
+            </tr>
+        	<tr>
+            
+            	<td>小学一年级上学期数学（人教）</td>
+            	<td>李玉</td>
+                <td>刘敏</td>
+            	<td>2018-09-08</td>
+                <td class="red">￥2300.00</td>
+            </tr>
+            <tr>
+            
+            	<td>小学二年级上学期数学（人教）</td>
+            	<td>张海涛</td>
+                <td>刘敏</td>
+            	<td>2018-09-08</td>
+                <td class="red">￥2300.00</td>
+            </tr>
+            
+           
+        </table>
+        <div id="page">
+        	<a href="#">首页</a>
+        	<a href="#">上一页</a>
+        	<a href="#" class="in">1</a>
+        	<a href="#">2</a>
+        	<a href="#">3</a>
+        	<a href="#">4</a>
+        	<a href="#">5</a>
+            ...
+        	<a href="#">65</a>
+        	<a href="#">下一页</a>
+        	<a href="#">尾页</a>
+            <input type="text" class="input_text" />
+            <input type="button" class="input_button" value="跳转">
+        </div>
+        
+</dl>
+
+
+
+
+
+
+
+
+
+</div><!--#main-->
+<!--<div id="bottom">Copyright © 2014 - 2016 <span>成都学邦科技有限公司</span>版权所有. 川公网安备11010802015210号 | 川CP备14027590号-1</div>-->
+</body>
+</html>

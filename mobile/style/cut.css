@@ -1,0 +1,35 @@
+input,button{
+    -webkit-appearance: none;
+
+}
+#showResult {
+    position: relative;
+}
+
+#showResult .cut_input{
+    position: absolute;
+    left: 40%;
+    top: 40px;
+    opacity: 0;
+}
+#changeAvatar{
+    text-align: center;
+}
+#changeAvatar p{
+    margin-top: 10px;
+    color: darkgrey;
+    font-size: .8em;
+}
+.btn{
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #03af60;
+    margin-left: 60px;
+    margin-top: 150px;
+}
+.btn:nth-of-type(2){
+    background-color: darkgrey;
+}

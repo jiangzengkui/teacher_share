@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+ <script type="text/javascript" src="../jquery-1.8.3.min.js"></script>
+   <script type="text/javascript" src="jquery.pagination.js"></script>
+   <link rel="stylesheet" type="text/css" href="pagination.css"/>
+  <script>
+  $(function(){
+	
+   $("#page").pagination(100 /**总页数**/, {
+                    
+				 prev_text: "« 上一页", /**中文替换**/
+                  next_text: "下一页 »",/**中文替换**/
+				  num_edge_entries:1,
+				  current_page:2, /**当前页**/
+                  items_per_page:1, // Show only one item per page
+				  callback:gopage  /**回调函数,函数参数是当前页数**/
+                });
+				 
+    
+   function gopage(curPage){
+	  alert(curPage);
+  }
+  }
+  
+ 
+  
+  )
+  
+  </script>
+</head>
+
+<body>
+<div id="page"></div>
+</body>
+</html>

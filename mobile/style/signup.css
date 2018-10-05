@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+.main{
+    width: 100%;
+    height: 600px;
+}
+.main .inp{
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+.main .inp .line{
+    width: 95%;
+    height: 1px;
+    background-color: gainsboro;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.main .inp input{
+    height: 30px;
+    border: none;
+    text-indent: 2em;
+}
+.main .inp .sex{
+    position: relative;
+    height: 30px;
+}
+.main .inp .sex span{
+    display: block;
+    float: left;
+}
+.main  button{
+    width: 94%;
+    height: 45px;
+    margin-left: 3%;
+    margin-top:30px;
+    border: none;
+    border-radius: 25px;
+    background-color: #06a34b;
+    color: white;
+}
+.online span{
+    display: block;
+    float: left;
+}
+.online input{
+    width: 20px;
+}
+.online .pay_online{
+    font-size: .9em;
+    color: #d03434;
+    margin-left: 20px;
+    margin-top: 5px;
+}

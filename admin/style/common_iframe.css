@@ -1,0 +1,25 @@
+/*
+@author:	xiaolin.wei
+@E-mail:	136896100@qq.com
+@qq:		136896100
+@version:	1.0 for wechat
+*/
+body {
+  background: #eee;
+  min-width: 400px;
+  min-height: 100px;
+  box-sizing: border-box;
+  padding: 0px 0 0px 0px;
+  transition: 1s;
+  overflow-x: scroll;
+  background-color:#FFFFFF;
+}
+.main_content {
+  max-width: 1000px;
+   width:97%;
+    margin-left:10px;
+	margin-top:10px;
+ 
+}
+
+

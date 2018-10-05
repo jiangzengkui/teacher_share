@@ -1,0 +1,1 @@
+var bottom='<div id="bottom"><a class="home in"><b></b>首 页</a><a class="class"><b></b>分类查询</a><a class="order"><b></b>我的订单</a><a class="member"><b></b>会员中心</a></div>'

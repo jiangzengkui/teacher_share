@@ -1,0 +1,31 @@
+.pay_name{
+    width: 90%;
+    margin-left: 5%;
+    line-height: 30px;
+    margin-top: 30px;
+    /*color: #272727;*/
+}
+.pay_name span{
+    color: black;
+    opacity: 0.8;
+}
+ .line{
+    width: 100%;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: darkgrey;
+}
+ b{
+     color: red;
+ }
+input {
+    width: 90%;
+    height: 30px;
+    border: none;
+    color: white;
+    margin-left: 5%;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: #00995a;
+}

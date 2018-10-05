@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--通用样式-->
+<link rel="stylesheet" type="text/css" href="../style/common.css"/>
+<!--弹窗iframe通用样式,顺序必须在common.css以后-->
+<link rel="stylesheet" type="text/css" href="../style/common_iframe.css"/>
+
+<!--自定义表单-->
+<link rel="stylesheet" type="text/css" href="../style/form.css"/>
+<script type="text/javascript" src="../script/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../script/layer.js"></script>
+  <!--表单页面需要引入-->
+ <script src="../script/form.js"></script>
+     <!--表单输入字数事件-->
+ <script type="text/javascript" src="../script/valuechange.js"></script>
+ <script type="text/javascript" src="../script/check.js"></script>
+ 
+ 
+   <script src="script/form.js"></script>
+	<script type="text/javascript" src="../valuechange.js"></script>	<!--内页必须引用 重新绑定事件-->
+    <script type="text/javascript" src="../page_event_load.js"></script>
+
+
+</head>
+<body>
+
+	<dl class="main_content" style="margin-left:10px; width:97%">
+           <table class="content" border="0" cellspacing="0">
+        	<tr>
+			<td >
+			
+             <label style=" margin-left:20px">
+           年级：
+			 <select   class="input_text"  style="width:150px">
+			   <option></option>
+               <option>小学一年级</option>
+             <option>小学二年级</option>
+              <option>小学三年级</option>
+               <option>小学四年级</option>
+                <option>小学五年级</option>
+                 <option>小学六年级</option>
+            <option>初中一年级</option>
+            <option>初中二年级</option>
+            <option>初中三年级</option>
+            <option>高中一年级</option>
+              <option>高中二年级</option>
+                <option>高中三年级</option>
+              
+             </select> 
+             </label> 
+			 
+			   <label style=" margin-left:20px">
+             学科
+              <select   class="input_text"  style="width:150px">
+			   <option></option>
+              <option>语文</option>
+			   <option>数学</option>
+              
+             </select> 
+			 
+             </label> 
+             
+            
+             <a href="#" class="tdbtn del"  style=" margin-left:40px">查 询</a>
+
+			</td>
+			</tr>
+		</table>
+
+		<table class="content" border="0" cellspacing="0">
+		
+         
+            <td class="lable">
+           年级
+           </td>
+		   
+           <td class="lable">
+          学期
+           </td>
+		    <td class="lable">
+         学科
+           </td>
+		    <td class="lable">
+          教材版本
+           </td>
+		    <td class="lable">
+          操作
+           </td>
+          </tr>
+          <tr>
+        
+          <td>小学一年级</td>
+           <td>上学期</td>
+		    <td>数学</td>
+		    <td>人教版</td>
+			 <td><a hef="" class="tdbtn edit">复制</td>
+          </tr>
+           <tr>
+          
+          <td>小学一年级</td>
+           <td>上学期</td>
+		    <td>数学</td>
+		    <td>人教版</td>
+			 <td><a hef="" class="tdbtn edit">复制</td>
+          </tr>
+           <tr>
+          
+          <td>小学一年级</td>
+           <td>上学期</td>
+		    <td>数学</td>
+		    <td>人教版</td>
+			 <td><a hef="" class="tdbtn edit">复制</td>
+          </tr>
+       </table>
+            <div id="page">
+        	<a href="#">首页</a>
+        	<a href="#">上一页</a>
+        	<a href="#" class="in">1</a>
+        	<a href="#">2</a>
+        	<a href="#">3</a>
+        	<a href="#">4</a>
+        	<a href="#">5</a>
+            ...
+        	<a href="#">65</a>
+        	<a href="#">下一页</a>
+        	<a href="#">尾页</a>
+            <input type="text" class="input_text" />
+            <input type="button" class="input_button" value="跳转">
+        </div>
+	</dl>
+</body>
+</html>

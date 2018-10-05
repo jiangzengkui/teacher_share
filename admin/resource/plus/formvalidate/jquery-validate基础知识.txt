@@ -1,0 +1,348 @@
+（一）准备工作
+下载网址
+http://bassistance.de/jquery-plugins/jquery-plugin-validation
+版本：1.15
+jquery版本支持1.4以上
+
+（二）引入
+<script src="../jquery-1.8.3.min.js"></script>
+<script src="jquery.validate.min.js"></script>
+<script src="messages_zh.js"></script>
+messages_zh.js是中文提示的js
+
+(三)
+默认校验规则
+(1)required:true                必输字段
+(2)remote:"check.php"      使用ajax方法调用check.php验证输入值
+(3)email:true                    必须输入正确格式的电子邮件
+(4)url:true                        必须输入正确格式的网址
+(5)date:true                      必须输入正确格式的日期 日期校验ie6出错，慎用
+(6)dateISO:true                必须输入正确格式的日期(ISO)，例如：2009-06-23，1998/01/22 只验证格式，不验证有效性
+(7)number:true                 必须输入合法的数字(负数，小数)
+(8)digits:true                    必须输入整数 必须是大于等于0的正整数
+(9)creditcard:                   必须输入合法的信用卡号
+(10)equalTo:"#field"          输入值必须和#field相同  注意必须是id，不能是name
+(11)accept:                       输入拥有合法后缀名的字符串（上传文件的后缀）
+(12)maxlength:5               输入长度最多是5的字符串(汉字算一个字符);输入字符大于配置长度后，无法输入，无提示，不友好
+(13)minlength:10              输入长度最小是10的字符串(汉字算一个字符)
+(14)rangelength:[5,10]      输入长度必须介于 5 和 10 之间的字符串")(汉字算一个字符)
+(15)range:[5,10]               输入值必须介于 5 和 10 之间
+(16)max:5                        输入值不能大于5
+(17)min:10                       输入值不能小于10
+
+
+(四)提交
+<script>
+$.validator.setDefaults({
+    submitHandler: function() {//校验通过
+      alert("提交事件!");
+    }
+});
+$().ready(function() {//校验帮定
+    $("#form").validate();
+});
+</script>
+
+（四）属性校验
+   通过扩展form元素input进行校验
+(1)扩展<input>属性
+   规则名=规则值
+eg:
+  <form id="form" class="cmxform">
+<div>
+必填：<input type="text"  required="true"/>
+</div>
+<div>
+电子邮件:<input name="email"  email="true"/>
+</div>
+<div>
+日期:<input name="birth"  dateISO="true"/>
+</div>
+<div>
+数字:<input name="num"  number="true"/>
+</div>
+<div>
+整数:<input type="text" name="zhengshu" digits="true" />
+</div>
+<div>
+相等1:<input type="text" name="dengyu1"  id="dengyu1"/>
+</div>
+<div>
+相等2:<input type="text" name="dengyu2"  equalTo="#dengyu1" />
+</div>
+<div>
+最小最大字符长度:<input type="text" name="maxlength"    maxlength="4" minlength="2" />
+</div>
+<div>
+字符长度在之间:<input type="text" name="rangelength"   rangelength="[1,4]" />
+</div>
+<div>
+最小最大字数字:<input type="text" name="max"    max="4" min="2" />
+</div>
+<div>
+数字在之间:<input type="text" name="range"   range="[0,1]" />
+</div>
+
+<div>
+<input type="submit" value="提交" style="width:120px" />
+</div>
+
+</form>
+
+(2)定义class
+
+可以在class扩展，多个用空格隔离，但class只能做数据类型校验，不能做大于、等于等判断
+	classRuleSettings: {
+		required: { required: true },
+		email: { email: true },
+		url: { url: true },
+		date: { date: true },
+		dateISO: { dateISO: true },
+		number: { number: true },
+		digits: { digits: true },
+		creditcard: { creditcard: true }
+	},
+
+eg:
+<input type="text"   name="name"  class="inputText required email"/>
+
+（3）data-rule属性扩展
+  其有2个特性
+  data-rule-校验规则名="值"
+  data-msg-规则名="错误提示内容"
+  其能完全取代属性扩展和class，只有他能显示提示信息
+  
+   eg:
+
+   <form id="form" >
+<fieldset>
+  <p>
+   <label for="cusername">用户名</label>
+   <input id="cusername" name="username" type="text"    required data-rule-rangelength="[0,5]" data-msg-required="用户名不能为空" >
+  </p>
+  <p>
+   <label for="cpassword">密码</label>
+   <input id="cpassword" name="password" type="password" minlength="5" data-rule-required="true"  data-msg-required="密码不能为空" data-msg-minlength="至少设置6位密码">
+  </p>
+  <p>
+   <label for="cconfirmpassword">确认密码</label>
+   <input id="cconfirmpassword" name="confirmpassword" type="password" data-rule-equalTo="#cpassword" data-msg-equalTo="两次密码不一致">
+  </p>
+  <p>
+   <label for="cemail">邮箱</label>
+   <input id="cemail" name="email" data-rule-required="true" data-rule-email="true" data-msg-required="邮箱不能为空" data-msg-email="邮箱的格式不正确">
+   </input>
+  </p>
+  <p>
+   <label for="chasreferee">有推荐人请勾选</label>
+   <input type="checkbox" id="chasreferee" name="hasreferee">
+  </p>
+  <p>
+   <label for="creferee">推荐人</label>
+   <input id="creferee" name="referee" data-rule-required="#chasreferee:checked" data-msg-required="推荐人不能为空">
+   </input>
+  </p>
+  <p>
+   <input type="button" value="提交" onclick="tj()">
+  </p>
+ </fieldset>
+</form>
+
+（4）混用
+ 1，2，3种模式可混用，如：
+  <input  type="text"  id="cusername"  name="username"   required  data-msg-required="用户名不能为空" >
+ 建议使用：第一种模式和第三种模式的提示信息，这个最简单
+
+
+五、js配置校验
+
+js配置校验在$("#form").validate();里面扩展
+
+$("#form").validate(
+//检验字段
+  rules: {
+    字段1:{
+       校验规则.....
+    },
+    字段2:{
+      校验规则.....
+    }
+
+  },
+ //错误提示
+ messages: {
+    字段1:{
+       规则名:"错误内容",
+       规则名:"错误内容"
+    },
+    字段2:{
+      规则名:"错误内容",
+      规则名:"错误内容"
+    }
+ }
+
+
+);
+
+eg:
+	$("#form").validate(
+	{//数组，花括号开始
+			rules: {
+				
+				username: {
+					required:true,
+					minlength:2
+				},
+				email:{
+				  required:true,
+				  email:true
+				}
+			},
+			messages: {
+				
+				username: {
+					required: "姓名不能为空",
+					minlength:"姓名至少2个字"
+				},
+				email: {
+					required: "邮件不能为空",
+					email:"邮件非法"
+				}
+			}
+
+           }//数组花括号结束
+	   );
+
+	
+
+注意：js校验和input属性校验可以混合使用
+
+(六)错误显示
+$("#myform").validate();
+构造函数可以带数组参数{......}
+
+  1、默认err是显示在配置字段name的后面
+     error.insertAfter(element); 
+     你可以插入到其他地方，如修改成
+      error.appendTo ( element.parent() ); 
+      eg:
+      errorPlacement: function(error, element) { 
+	if ( element.is(":radio") ) 
+		error.appendTo ( element.parent() ); 
+	else if ( element.is(":checkbox") ) 
+		error.appendTo ( element.parent() ); 
+	 else if ( element.is("input[name=captcha]") ) 
+		error.appendTo ( element.parent() ); 
+	else 
+		 error.insertAfter(element); 
+	}
+
+} 
+  2、可以集中在一个区域显示
+		//提示摘要
+		 showErrors: function(errorMap, errorList) {
+		 	$("#ts").html("Your form contains " + this.numberOfInvalids() 
+			+ " errors, see details below.");
+		
+			this.defaultShowErrors();
+  		 }
+		 //默认容日
+		 ,errorLabelContainer:"#messageBox"
+		 //每条错误的封装
+		,wrapper:"li"
+
+	
+ 3、每条错误的渲染
+   errorPlacement:functuin();
+
+   eg:用layer.tips提示带以前的提示方式
+    $("#signupForm").validate({
+	
+				errorPlacement: function(error, element) {//自定义错误类型
+				if (element.is(':radio') || element.is(':checkbox')) { //如果是radio或checkbox，选择最后一个
+				   var ename=element.attr("name");
+				    var s=$("input[name="+ename+"]").last()
+					element=s;
+				}
+				if(error.text()!=""){//有错误，则先判断有无隐藏错误提示，有就显示，无则创建
+					if( $("#tips_"+element.attr("id")).is(":hidden"))
+				      	$("#tips_"+element.attr("id")).show();
+			    	else
+					//创建一个有id的tips,主要防止生成多个
+                 		layer.tips(error.html(), "#"+element.attr("id"),{tipsMore :true,time:300000000,id:'tips_'+element.attr("id")});
+			
+				 }//if(error.text()!="") end
+			     else{
+				 //无错，则隐藏错误提示 jquery能容错可能不存在的元素
+				   $("#tips_"+element.attr("id")).hide();
+				  }//if(error.text()!="") else end
+				  
+				},// errorPlacement: function(error, element) {   end
+				
+				//必须要加上这个函数，才会有争取后错误提示小时
+				success: function( error, element ) {
+		         
+				
+			   }
+				
+			}); // $("#signupForm").validate({  end
+      
+      });
+
+  
+（七）自定义验证规则
+  可把一些通用的校验写成js文件引入
+jQuery.validator.addMethod(
+	"isMobile"//规则名
+	, function(value, element) { //激发的校验函数，返回
+	   boolean validate_reult=false;//校验价格，通过为true,反之为false;
+           return this.optional(element) ||  validate_reult );  
+        }
+	, "请正确填写您的手机号码" //错误提示
+ ); 
+
+
+eg:
+
+//检测手机号是否正确
+jQuery.validator.addMethod("isMobile", function(value, element) {
+	var length = value.length;
+	var regPhone = /^1([3578]\d|4[57])\d{8}$/;
+    return this.optional(element) || ( length == 11 && regPhone.test( value ) );  
+}, "请正确填写您的手机号码"); 
+
+//检测用户姓名是否为汉字
+jQuery.validator.addMethod("isChar", function(value, element) {
+	var length = value.length;
+	var regName = /[^\u4e00-\u9fa5]/g;
+    return this.optional(element) || !regName.test( value );  
+}, "请正确格式的姓名(暂支持汉字)");
+
+//檢測邮政编码
+jQuery.validator.addMethod("isZipCode", function(value, element) {  
+    var tel = /^[0-9]{6}$/;
+    return this.optional(element) || (tel.test(value));
+}, "请正确填写您的邮政编码");
+
+
+你可以任意写前端的校验逻辑
+//自定义
+jQuery.validator.addMethod("zdy", function(value, element) {
+     var ret=false;
+	 if($("#name").val()=='jzk'  &&  value=='sex')
+	     ret=true;
+    return this.optional(element) || ret;
+}, "帅哥不能骚整");
+
+
+(十)特殊元素
+ 1、hidden
+   默认不校验隐藏函数，如果要检验，需要设置
+   $.validator.setDefaults({ ignore: '' });
+
+
+ 2、validate.js好像只支持<input name,不支持id
+ <input id="ddd">无效
+
+十、最佳实践
+

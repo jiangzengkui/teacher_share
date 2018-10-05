@@ -1,0 +1,105 @@
+
+input,button{
+    -webkit-appearance: none;
+
+}
+.mui-container-fluid{
+    background-color: white;
+    width: 100%;
+}
+.mui-tabs__barmui-tabs__bar{
+    width: 90%;
+}
+.mui-container-fluid ul li a{
+    width: 100%;
+    height:40px;
+}
+.mui-container-fluid .mui-tabs__bar{
+    border: 1px solid #03af60;
+    margin-top: 5%;
+    height: 20px;
+    border-radius: 25px 25px 25px 25px;
+    overflow: hidden;
+}
+.mui-tabs__bar .mui-tabs__bar li a{
+    color: #d5ffec;
+}
+.mui-tabs__bar>li.mui--is-active>a {
+    color: white;
+    background-color: #03af60;
+    text-decoration: none;
+}
+.mui-tabs__bar>li>a{
+    color: #03af60;
+}
+/*我的红包中间内容*/
+.mui-container-fluid .center{
+    width: 50%;
+    height: 150px;
+    float: left;
+    padding-top: 15%;
+    padding-bottom: 40%;
+}
+.mui-container-fluid .center_left img{
+    width: 60%;
+    margin-left: 37%;
+}
+.mui-container-fluid .center_right{
+    text-align: center;
+}
+.mui-container-fluid .center_right p{
+    display: block;
+    margin-right: 22%;
+    margin-top: 15%;
+    opacity: 0.8;
+}
+.mui-container-fluid .center_right h1{
+    color: red;
+    margin-top: 2%;
+}
+.mui-container-fluid .center_right h1 span{
+    font-size: 4vw;
+}
+.mui-container-fluid .containerbox{
+    margin-top: 40%;
+}
+
+.tx_btn{
+    height: 35px;
+    width: 100px;
+    border: none;
+    color: #d5ffec;
+    border-radius: 10px;
+    background-color: #03af60;
+    margin-top:50%;
+    margin-bottom: 20%;
+    margin-left: 50px;
+}
+.red{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.red_pic{
+    width: 65px;
+    height: 65px;
+    overflow: hidden;
+}
+.red_pic img{
+  margin-top: 20px;
+}
+.red_word{
+    text-align: left;
+    margin-top: 5%;
+}
+.red .red_word span{
+    color: gray;
+}
+.red .red_word .not_word{
+    color: red;
+}
+.word span{
+    display: block;
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: gray;
+}

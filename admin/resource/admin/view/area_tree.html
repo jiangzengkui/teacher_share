@@ -1,0 +1,59 @@
+[#include "/resource/admin/view/comm_mac.ftl"/]
+<script type="text/javascript">
+var root_path="${root_path!}";/***在js里获得web服务目录，并设置成变量***/
+</script>
+<script type="text/javascript" src="${root_path!}/resource/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="${rec_path}/js/admin_comm.js"></script>
+<script type="text/javascript" src="${plus_path!}/layer/layer.js"></script>
+<link rel="stylesheet" type="text/css" href="${rec_path!}/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="${rec_path!}/css/common_iframe.css"/>
+<link rel="stylesheet" type="text/css" href="${rec_path!}/css/form.css"/>
+<link rel="stylesheet" href="${root_path!}/resource/plus/ztree/zTreeStyle/zTreeStyle.css" type="text/css">
+<script type="text/javascript" src="${root_path!}/resource/plus/ztree/js/jquery.ztree.core.min.js"></script>
+<script type="text/javascript" src="${root_path!}/resource/plus/ztree/js/jquery.ztree.excheck.min.js"></script>
+
+<dl class="main_content">
+<form id="form">
+
+    <div class="zTreeDemoBackground ">
+    	 <ul id="treeDemo" class="ztree"></ul>
+    </div>
+    <script type="text/javascript">
+
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback:{
+				onClick:getValue
+			}
+		};
+		var zNodes =[
+			[#list areaList as list]
+			   ${list!}
+			[/#list]
+			
+		];
+		
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			
+		function getValue(event,treeId,treeNode){
+			goPage(treeNode.id,treeNode.pId,treeNode.name);
+		}
+
+		function goPage(dict_id,pId,dict_name){
+			if(pId == '3'){
+			window.parent.setting(dict_id,dict_name);
+			parent.layer.closeAll();
+			}
+		}
+
+		
+    </script>
+    <!--树结束-->
+
+	</form>
+</dl>
+		

@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+html { overflow: scroll; width: 100%; height: 100%; font-size: 100%; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html, body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, label, textarea, p, blockquote, th, td { margin: 0; padding: 0; -webkit-text-size-adjust: none;-moz-text-size-adjust:none; -ms-text-size-adjust: none;-o-text-size-adjust: none;text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);/*鍘婚櫎楂樹寒*/ }
+body, textarea { font-family: Arial; font-size: 100%; line-height: 1.5; font-weight: 400; color: #444444 }
+a { text-decoration: none; color: #444444 }
+a:visited {color: #444444; }
+
+em, i { font-style: normal }
+h1, h2, h3, h4, h5, h6, strong { font-weight: 700 }
+label, input, select { vertical-align: middle }
+img, button { background: transparent; border: 0 none; vertical-align: middle }
+ol, ul { list-style: none }
+table, th, td, fieldset, legend { font-weight: 400; border: 0 none; border-collapse: collapse }
+/**{ -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none }*/
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=search], input[type=tel] { vertical-align: middle; outline: 0; -webkit-appearance: none }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+color:#bbb;
+}
+select { outline: 0; -webkit-appearance: none }
+textarea { display: block; padding: 5px; font-size: 15px; border: 1px solid #d7d7d7; outline: 0; border-radius: 3px; background: -webkit-linear-gradient(#ededed 0, #fff 5%) }
+body { background-color: #F2F2F2; }
+
+
+.mui-switch {
+  width: 52px;
+  height: 31px;
+  position: relative;
+  border: 1px solid #dfdfdf;
+  background-color: #fdfdfd;
+  box-shadow: #dfdfdf 0 0 0 0 inset;
+  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-clip: content-box;
+  display: inline-block;
+  -webkit-appearance: none;
+  user-select: none;
+  outline: none; }
+  .mui-switch:before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+  .mui-switch:checked {
+    border-color: #64bd63;
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63; }
+    .mui-switch:checked:before {
+      left: 21px; }
+  .mui-switch.mui-switch-animbg {
+    transition: background-color ease 0.4s; }
+    .mui-switch.mui-switch-animbg:before {
+      transition: left 0.3s; }
+    .mui-switch.mui-switch-animbg:checked {
+      box-shadow: #dfdfdf 0 0 0 0 inset;
+      background-color: #64bd63;
+      transition: border-color 0.4s, background-color ease 0.4s; }
+      .mui-switch.mui-switch-animbg:checked:before {
+        transition: left 0.3s; }
+  .mui-switch.mui-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
+    .mui-switch.mui-switch-anim:before {
+      transition: left 0.3s; }
+    .mui-switch.mui-switch-anim:checked {
+      box-shadow: #64bd63 0 0 0 16px inset;
+      background-color: #64bd63;
+      transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
+      .mui-switch.mui-switch-anim:checked:before {
+        transition: left 0.3s; }
+
+/*# sourceMappingURL=mui-switch.css.map */
+
+
+/* Tomorrow Night Eighties Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* css88 0.1*/
+
+.prettyprint,pre.prettyprint {
+    background-color: #444444;
+    border: 1px solid #272822;
+    overflow: hidden;
+    padding: 0px;
+    margin: 20px 0;
+    font: 14px/20px 'courier new';
+    color: #666;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.prettyprint.linenums,
+pre.prettyprint.linenums {
+  /*-webkit-box-shadow: inset 40px 0 0 #39382E, inset 41px 0 0 #464741;
+  -moz-box-shadow: inset 40px 0 0 #39382E, inset 41px 0 0 #464741;
+  box-shadow: inset 40px 0 0 #39382E, inset 41px 0 0 #464741;*/
+}
+.prettyprint .linenums ol,
+pre.prettyprint .linenums ol {
+    margin: 0 0 0 33px;
+    list-style: decimal;
+}
+.prettyprint .linenums ol li,
+pre.prettyprint .linenums ol li {
+    padding-left: 12px;
+  color: #bebec5;
+  line-height: 20px;
+  margin-left: 0;
+  list-style: decimal;
+}
+.prettyprint ol.linenums{
+    margin-left: 48px;
+    margin-bottom: 0;
+/*margin-bottom: -8px; margin-top:-8px; margin-right: -8px; position:relative;*/
+    background-color: #272822; padding: 8px;
+    list-style: decimal;
+}
+.prettyprint ol.linenums li,
+pre.prettyprint ol.linenums li {
+   /* padding-left: 12px;*/
+  color: #bebec5;
+  line-height: 20px;
+  margin-left: 0;
+  list-style: decimal;
+}
+.prettyprint .com { color: #93a1a1; }
+.prettyprint .lit { color: #AE81FF; }
+.prettyprint .pun,
+.prettyprint .opn,
+.prettyprint .clo { color: #F8F8F2; }
+.prettyprint .fun { color: #dc322f; }
+.prettyprint .str,
+.prettyprint .atv { color: #E6DB74; }
+.prettyprint .kwd,
+.prettyprint .tag { color: #F92659; }
+.prettyprint .typ,
+.prettyprint .atn,
+.prettyprint .dec,
+.prettyprint .var { color: #A6E22E; }
+.prettyprint .pln { color: #66D9EF; }
+
